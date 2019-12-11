@@ -1,8 +1,13 @@
 @import "./settings/_fonts.scss";
 @import "./settings/_colors.scss";
 @import "./settings/_reset.scss";
+@import './elements/header.scss';
 
 body {
   font-family: $font-base;
   background-color: palegreen;
 }
+.flex-box{
+  display: flex;
+}
+
