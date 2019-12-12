@@ -1,10 +1,43 @@
 
 header{
-  height: 963px;
-  background-color: gold;
+  height: 100vh;
   width: 100%;
   .headerImg{
     background:transparent url('../../assets/Home-Hero-Image.jpg') -483px 0 no-repeat padding-box;
     width: 50.34%;
+  }
+  div:nth-child(2){
+    justify-content: center;
+    align-items: center;
+    width: 49.66%;
+  }
+}
+.intro{
+  flex-direction: column;
+  align-items: center;
+  h1{
+    text-align: center;
+    font-size: 38px;
+    color: #3C3C3C;
+    line-height: 55px;
+    letter-spacing: 0.76px;
+  }
+  img{
+    padding-top: 25px;
+    padding-bottom: 65px;
+  }
+  .organise{
+    justify-content: space-between;
+    width: 100%;
+    div{
+      text-align: center;
+      width: 46.13%;
+      font-size: 36px;
+      color: #3C3C3C;
+      border: 0.75px solid #3C3C3C;
+      padding: 15px 0;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
   }
 }
