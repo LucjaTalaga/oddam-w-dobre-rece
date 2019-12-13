@@ -5,11 +5,7 @@ import HomeHeader from "./HomeComponents/HomeHeader";
 import HomeThreeColumns from "./HomeComponents/HomeThreeColumns"
 
 import {
-    HashRouter,
-    Route,
     Link,
-    Switch,
-    NavLink,
 } from 'react-router-dom';
 
 import { Link as scrollLink } from 'react-scroll';

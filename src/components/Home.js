@@ -10,6 +10,7 @@ import {
 } from 'react-router-dom';
 import HomeHeader from "./HomeComponents/HomeHeader";
 import HomeThreeColumns from "./HomeComponents/HomeThreeColumns";
+import HomeBasicSteps from "./HomeComponents/HomeBasicSteps";
 
 class Home extends Component {
     render() {
@@ -17,6 +18,7 @@ class Home extends Component {
          <>
              <HomeHeader name='HomeHeader'/>
              <HomeThreeColumns bagsGiven='0' organizationsSupported='0' collectionsOrganized='0'/>
+             <HomeBasicSteps/>
          </>
         )
     }

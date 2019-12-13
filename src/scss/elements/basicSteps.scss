@@ -1,0 +1,52 @@
+
+.basicSteps{
+  flex-direction: column;
+  align-items: center;
+  h1{
+    color: #3C3C3C;
+    font-size: 38px;
+    line-height: 55px;
+    letter-spacing: -0.76px;
+    margin-top: 55px;
+    margin-bottom: 25px;
+  }
+  .infoSection{
+    background-color: #F0F1F1;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 34px;
+    margin-bottom: 35px;
+    .infoElement{
+      flex-direction: column;
+      align-items: center;
+      width: 128px;
+      margin-top: 76px;
+      margin-bottom: 71px;
+      p:first-of-type{
+        margin-top: 10px;
+        font-size: 18px;
+        color: #3C3C3C;
+        text-align: center;
+      }
+      p:last-of-type{
+        color: #3C3C3C;
+        font-size: 16px;
+        text-align: center;
+      }
+      div{
+        border: 1px solid #707070;
+        margin: 10.5px 0;
+        width: 70px;
+      }
+    }
+  }
+  .link{
+    color: #3C3C3C;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 36px;
+    text-align: center;
+    border: 0.75px solid #3C3C3C;
+    padding: 13px 93px;
+  }
+}
