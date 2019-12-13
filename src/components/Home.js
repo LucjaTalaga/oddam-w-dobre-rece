@@ -8,15 +8,15 @@ import {
     Switch,
     NavLink,
 } from 'react-router-dom';
-import logo from "../logo.svg";
 import HomeHeader from "./HomeComponents/HomeHeader";
+import HomeThreeColumns from "./HomeComponents/HomeThreeColumns";
 
 class Home extends Component {
     render() {
         return (
          <>
-             <HomeHeader/>
-
+             <HomeHeader name='HomeHeader'/>
+             <HomeThreeColumns name='HomeThreeColumns'/>
          </>
         )
     }
