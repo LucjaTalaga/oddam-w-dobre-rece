@@ -16,7 +16,7 @@ class Home extends Component {
         return (
          <>
              <HomeHeader name='HomeHeader'/>
-             <HomeThreeColumns name='HomeThreeColumns'/>
+             <HomeThreeColumns bagsGiven='0' organizationsSupported='0' collectionsOrganized='0'/>
          </>
         )
     }
