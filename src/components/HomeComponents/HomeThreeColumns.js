@@ -5,7 +5,7 @@ class HomeThreeColumns extends Component {
 
     render() {
         return (
-            <section className='threeColumns flex-box'>
+            <section className='threeColumns flex-box' id='HomeThreeColumns'>
                 <div>
                     <h1>{this.props.bagsGiven}</h1>
                     <h2>Oddanych worków</h2>

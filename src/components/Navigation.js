@@ -1,14 +1,12 @@
 import React, {Component} from "react";
 import ReactDOM from "react-dom";
 import Home from "./Home";
-import HomeHeader from "./HomeComponents/HomeHeader";
-import HomeThreeColumns from "./HomeComponents/HomeThreeColumns"
 
 import {
     Link,
 } from 'react-router-dom';
 
-import { Link as scrollLink } from 'react-scroll';
+import { Link as ScrollLink } from 'react-scroll';
 
 class Navigation extends Component{
 
@@ -20,11 +18,11 @@ class Navigation extends Component{
                     <li><Link className='link register' to="/register">Załóż konto</Link></li>
                 </ul>
                 <ul className='scrollList flex-box'>
-                    <li><scrollLink className='scrollLink start' to={HomeHeader} spy={true}>Start</scrollLink></li>
-                    <li><scrollLink className='scrollLink' to={HomeThreeColumns} spy={true}>O co chodzi?</scrollLink></li>
-                    <li><scrollLink className='scrollLink' spy={true}>O nas</scrollLink></li>
-                    <li><scrollLink className='scrollLink' spy={true}>Fundacja i organizacje</scrollLink></li>
-                    <li><scrollLink className='scrollLink' spy={true}>kontakt</scrollLink></li>
+                    <li><ScrollLink className='scrollLink start' activeClass='active' to='HomeHeader' spy={true}  smooth={true}>Start</ScrollLink></li>
+                    <li><ScrollLink className='scrollLink' activeClass='active' to='HomeThreeColumns' smooth={true} spy={true}>O co chodzi?</ScrollLink></li>
+                    <li><ScrollLink className='scrollLink' spy={true} to='HomeAboutUs' smooth={true} spy={true}>O nas</ScrollLink></li>
+                    <li><ScrollLink className='scrollLink' spy={true}>Fundacja i organizacje</ScrollLink></li>
+                    <li><ScrollLink className='scrollLink' spy={true}>kontakt</ScrollLink></li>
                 </ul>
             </nav>
         );

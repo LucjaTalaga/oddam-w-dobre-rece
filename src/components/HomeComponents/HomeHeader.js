@@ -8,7 +8,7 @@ import decoration from '../../assets/Decoration.svg';
 class HomeHeader extends Component {
     render() {
         return (
-                <header className='flex-box'>
+                <header className='flex-box' id='HomeHeader'>
                     <div className='headerImg'> </div>
                     <div className='flex-box'>
                         <div className='intro flex-box'>

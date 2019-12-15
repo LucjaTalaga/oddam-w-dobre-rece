@@ -16,9 +16,9 @@ class Home extends Component {
     render() {
         return (
          <>
-             <HomeHeader name='HomeHeader'/>
-             <HomeThreeColumns bagsGiven='0' organizationsSupported='0' collectionsOrganized='0'/>
-             <HomeBasicSteps/>
+             <HomeHeader/>
+             <HomeThreeColumns  bagsGiven='0' organizationsSupported='0' collectionsOrganized='0'/>
+             <HomeBasicSteps name='HomeBasicSteps'/>
          </>
         )
     }
