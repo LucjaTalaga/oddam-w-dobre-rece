@@ -7,11 +7,14 @@ class HomeAboutUs extends Component {
     render() {
         return (
             <section className='aboutUs flex-box'>
-                <div>
-                    <h1>O nas</h1>
-                    <img src={decoration}/>
-                    <p>Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.</p>
-                    <img src={signature}/>
+                <div className='flex-box'>
+                    <div className='aboutUsElements flex-box'>
+                        <h1>O nas</h1>
+                        <img src={decoration}/>
+                        <p>Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya
+                            nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.</p>
+                        <img src={signature}/>
+                    </div>
                 </div>
                 <div className='people'>
                 </div>
