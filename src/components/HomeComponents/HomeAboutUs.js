@@ -8,7 +8,7 @@ class HomeAboutUs extends Component {
         return (
             <section className='aboutUs flex-box'>
                 <div className='flex-box'>
-                    <div className='aboutUsElements flex-box'>
+                    <div className='aboutUsElements flex-box' id='HomeAboutUs'>
                         <h1>O nas</h1>
                         <img src={decoration}/>
                         <p>Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya
