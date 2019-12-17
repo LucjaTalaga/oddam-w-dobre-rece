@@ -12,6 +12,7 @@ import HomeHeader from "./HomeComponents/HomeHeader";
 import HomeThreeColumns from "./HomeComponents/HomeThreeColumns";
 import HomeBasicSteps from "./HomeComponents/HomeBasicSteps";
 
+import HomeWhoWeHelp from "./HomeComponents/HomeWhoWeHelp";
 class Home extends Component {
     render() {
         return (
@@ -19,6 +20,8 @@ class Home extends Component {
              <HomeHeader/>
              <HomeThreeColumns  bagsGiven='0' organizationsSupported='0' collectionsOrganized='0'/>
              <HomeBasicSteps name='HomeBasicSteps'/>
+
+             <HomeWhoWeHelp/>
          </>
         )
     }

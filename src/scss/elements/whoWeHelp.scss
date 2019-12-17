@@ -1,0 +1,22 @@
+
+.whoWeHelp{
+  flex-direction: column;
+  align-items: center;
+
+
+  .organization{
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid grey;
+  }
+  .activeButton {
+    border: 2px solid grey;
+  }
+}
+.show{
+  display: block;
+}
+.hidden{
+  display: none;
+}
