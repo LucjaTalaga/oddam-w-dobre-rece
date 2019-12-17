@@ -15,47 +15,50 @@ class Locals extends Component {
     localsButtonHandler = () => {
         this.props.local();
     };
+
     render() {
         return (
-            <section className='whoWeHelp flex-box' id='HomeWhoWeHelp'>
-                <h1>Komu pomagamy?</h1>
-                <img src={decoration}/>
-                <div className='typesOfSupports'>
-                    <button onClick={this.foundationButtonHandler}>Fundacjom</button>
-                    <button onClick={this.organizationButtonHandler}>Organizacjom pozarządowym</button>
-                    <button onClick={this.localsButtonHandler} className='activeButton'>Lokalnym zbiórkom</button>
-                </div>
-                <p>Lorem Ipsum ...</p>
-                <div className='organizations'>
-                    <div className='organization flex-box'>
-                        <div>
-                            <h1>Zbiórka "Lorem Ipsum1"</h1>
-                            <p>Cel i misja: Pomoc dla potrzebujących</p>
+            <div className='flex-box whoWeHelp_Container'>
+                <section className='whoWeHelp flex-box' id='HomeWhoWeHelp'>
+                    <h1>Komu pomagamy?</h1>
+                    <img src={decoration}/>
+                    <div className='typesOfSupports flex-box'>
+                        <button onClick={this.foundationButtonHandler}>Fundacjom</button>
+                        <button onClick={this.organizationButtonHandler}>Organizacjom <br/> pozarządowym</button>
+                        <button onClick={this.localsButtonHandler} className='activeButton'>Lokalnym <br/> zbiórkom</button>
+                    </div>
+                    <p>W naszej bazie znajdziesz listę zweryfikowanych zbiórek, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.</p>
+                    <div className='organizations'>
+                        <div className='organization flex-box'>
+                            <div>
+                                <h2>Zbiórka "Lorem Ipsum1"</h2>
+                                <p>Cel i misja: Pomoc dla potrzebujących</p>
+                            </div>
+                            <div>
+                                <p>Ubrania, sprzęt, ksiązki </p>
+                            </div>
                         </div>
-                        <div>
-                            <p>Ubrania, sprzęt, ksiązki </p>
+                        <div className='organization flex-box'>
+                            <div>
+                                <h2>Fundacja "Dla dzieci"</h2>
+                                <p>Cel i misja: Pomoc dla potrzebujących</p>
+                            </div>
+                            <div>
+                                <p>Ubrania, sprzęt, ksiązki </p>
+                            </div>
+                        </div>
+                        <div className='organization flex-box'>
+                            <div>
+                                <h2>Fundacja "Bez domu"</h2>
+                                <p>Cel i misja: Pomoc dla potrzebujących</p>
+                            </div>
+                            <div>
+                                <p>Ubrania, sprzęt, ksiązki </p>
+                            </div>
                         </div>
                     </div>
-                    <div className='organization flex-box'>
-                        <div>
-                            <h1>Fundacja "Dla dzieci"</h1>
-                            <p>Cel i misja: Pomoc dla potrzebujących</p>
-                        </div>
-                        <div>
-                            <p>Ubrania, sprzęt, ksiązki </p>
-                        </div>
-                    </div>
-                    <div className='organization flex-box'>
-                        <div>
-                            <h1>Fundacja "Bez domu"</h1>
-                            <p>Cel i misja: Pomoc dla potrzebujących</p>
-                        </div>
-                        <div>
-                            <p>Ubrania, sprzęt, ksiązki </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                </section>
+            </div>
         );
     }
 }

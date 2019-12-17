@@ -1,22 +1,78 @@
+.whoWeHelp_Container{
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
 
-.whoWeHelp{
+.whoWeHelp {
   flex-direction: column;
   align-items: center;
-
-
-  .organization{
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 10px;
-    border-bottom: 2px solid grey;
+  width: 70.74vw;
+  >h1{
+    margin-bottom: 2.6vh;
+    font-size: 3.95vh;
+    color: #3C3C3C;
   }
-  .activeButton {
-    border: 2px solid grey;
+  img{
+    margin-bottom: 5.2vh;
+  }
+  .typesOfSupports{
+    width: 55.80%;
+    justify-content: space-between;
+    button{
+      font-size: 2.49vh;
+      border: none;
+      padding: 2.39vh 2.21vw;
+      background-color: white;
+      text-align: center;
+    }
+    .activeButton {
+      border: 2px solid grey;
+    }
+  }
+  >p{
+    margin-top: 7.28vh;
+    width: 47.62%;
+    text-align: center;
+    color: #3C3C3C;
+    font-size: 2.29vh;
+    margin-bottom: 6.68vh;
+  }
+  .organizations {
+    width: 100%;
+    .organization {
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 10px;
+      border-bottom: 2px solid grey;
+      width: 100%;
+      h2{
+        color: #3C3C3C;
+        font-size: 2.7vh;
+        line-height: 3.22vh;
+      }
+      p{
+        color: #3C3C3C;
+        font-size: 1.87vh;
+        line-height: 2.29vh;
+        margin-bottom: 3.22vh;
+      }
+    }
+  }
+  .pageNumbers{
+    margin-top: 6.55vh;
+    button{
+      border: none;
+      background-color: white;
+      color: #3C3C3C;
+    }
   }
 }
-.show{
+
+.show {
   display: block;
 }
-.hidden{
+
+.hidden {
   display: none;
 }
