@@ -11,7 +11,45 @@
     background: #FFFFFFC9;
     width: 100%;
     height: 100%;
-    z-index: 1;
     position: absolute;
+    z-index: -1;
+  }
+  h1{
+    color: #3C3C3C;
+    font-size: 28px;
+  }
+  .contactForm{
+    flex-direction: column;
+    align-items: center;
+    width: 28.79%;
+  }
+  form{
+    max-width: 100%;
+    label{
+      font-size: 12px;
+      input {
+        border: none;
+        border-bottom: 1px solid black;
+      }
+    }
+    >label{
+      width: 100%;
+      display: block;
+      input{
+        width: 95%;
+      }
+    }
+    .labels{
+      label{
+        width: 50%;
+        input{
+          width: 90%;
+        }
+      }
+    }
+  button{
+    float: right;
+    margin-top: 4.58vh;
+  }
   }
 }
