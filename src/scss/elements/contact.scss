@@ -17,6 +17,7 @@
   h1{
     color: #3C3C3C;
     font-size: 28px;
+    margin-bottom: 3.1vh;
   }
   .contactForm{
     flex-direction: column;
@@ -25,31 +26,48 @@
   }
   form{
     max-width: 100%;
+    margin-top: 7.28vh;
     label{
       font-size: 12px;
       input {
         border: none;
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid #707070;
       }
     }
     >label{
       width: 100%;
       display: block;
-      input{
+      color: #3C3C3C;
+      margin-top: 4.16vh;
+      textarea{
         width: 95%;
+        text-align: left;
+        letter-spacing: 0;
+        color: #3C3C3C26;
+        border: none;
+        border-bottom: 1px solid #707070;
+        margin-top: 9px;
+        background-color: #FFFFFFC9;
       }
     }
     .labels{
       label{
+        color: #3C3C3C;
         width: 50%;
         input{
           width: 90%;
+          margin-top: 9px;
+          background-color: #FFFFFFC9;
+          color: #3C3C3C26;
         }
       }
     }
   button{
     float: right;
     margin-top: 4.58vh;
+    border: 0.75px solid #3C3C3C;
+    font-size: 13px;
+    padding: 9.5px 36px;
   }
   }
 }

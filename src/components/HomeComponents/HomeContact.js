@@ -19,7 +19,7 @@ class HomeContact extends Component {
                             </label>
                         </div>
                         <label id="textarea">Wpisz swoją wiadomość<br/>
-                            <input type="text" name="sometext"
+                            <textarea type="text" name="sometext"
                                    placeholder='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'/>
                         </label>
                         <button>Wyślij</button>
