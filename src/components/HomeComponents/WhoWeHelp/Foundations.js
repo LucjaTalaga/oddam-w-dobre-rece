@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import decoration from '../../../assets/Decoration.svg';
-
+import data from '../../../fundacje'
+let organizacje = data.organizations;
 
 class Foundations extends Component {
     state = {
@@ -8,18 +9,9 @@ class Foundations extends Component {
         page2: 'hidden',
         page3: 'hidden'
     };
-    foundationButtonHandler = () => {
-        this.props.foundation();
+    organizationButtonHandler = (e, num) => {
+        this.props.organization(num);
     };
-
-    organizationButtonHandler = () => {
-        this.props.organization();
-    };
-
-    localsButtonHandler = () => {
-        this.props.local();
-    };
-
     page1ButtonHandler = () => {
         this.setState({
             page1: 'show, organizations',
@@ -49,9 +41,7 @@ class Foundations extends Component {
                     <h1>Komu pomagamy?</h1>
                     <img src={decoration}/>
                     <div className='typesOfSupports flex-box'>
-                        <button onClick={this.foundationButtonHandler} className='activeButton'>Fundacjom</button>
-                        <button onClick={this.organizationButtonHandler}>Organizacjom <br/> pozarządowym</button>
-                        <button onClick={this.localsButtonHandler}>Lokalnym <br/> zbiórkom</button>
+                        {organizacje.map((el, i)=> (<button onClick={e =>this.organizationButtonHandler(e, i)}>{el.navName}</button>))}
                     </div>
                     <p>W naszej bazie znajdziesz listę zweryfikowanych fundacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.</p>
                     <div className={this.state.page1}>
