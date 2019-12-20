@@ -65,14 +65,13 @@
       border: none;
       background-color: white;
       color: #3C3C3C;
+      font-size: 13px;
+      padding: 9px 10px;
+      margin-right: 15px;
+      }
+    .activeButton {
+      border: 2px solid grey;
     }
   }
 }
 
-.show {
-  display: block;
-}
-
-.hidden {
-  display: none;
-}

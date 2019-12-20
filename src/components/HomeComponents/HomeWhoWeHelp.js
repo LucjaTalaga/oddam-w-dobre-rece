@@ -1,8 +1,5 @@
 import React, {Component} from "react";
 import decoration from '../../assets/Decoration.svg';
-import Foundations from "./WhoWeHelp/Foundations";
-import Organizations from "./WhoWeHelp/Organizations";
-import Locals from "./WhoWeHelp/Locals";
 import data from '../../fundacje';
 
 let organizacje = data.organizations;
@@ -15,7 +12,8 @@ class HomeWhoWeHelp extends Component {
 
     organizationButtonHandler = (e, num) => {
         this.setState({
-            typeOfOrganization: num
+            typeOfOrganization: num,
+            page: 1
         });
     };
     pagesButtonHandler = (e, num) => {
@@ -45,7 +43,7 @@ class HomeWhoWeHelp extends Component {
                     <img src={decoration}/>
                     <div className='typesOfSupports flex-box'>
                         {organizacje.map((el, i) => (
-                            <button onClick={e => this.organizationButtonHandler(e, i)}>{el.navName}</button>))}
+                            <button onClick={e => this.organizationButtonHandler(e, i)}className={ this.state.typeOfOrganization === i ? 'activeButton': '' }>{el.navName}</button>))}
                     </div>
                     <p>{actualOrganizations.description}</p>
                     <div className='organizations'>
@@ -62,7 +60,7 @@ class HomeWhoWeHelp extends Component {
                             ))}
                     </div>
                     <div className='pageNumbers'>
-                        {pages.map(el => <button onClick={e => this.pagesButtonHandler(e, el)}>{el}</button>)}
+                        {pages.map(el => <button onClick={e => this.pagesButtonHandler(e, el)} className={ this.state.page === el ? 'activeButton': '' }>{el}</button>)}
                     </div>
                 </section>
             </div>
