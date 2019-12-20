@@ -1,39 +1,51 @@
-
-nav {
+.navigation {
   position: fixed;
   top: 0;
   right: 0;
-  margin-right: 7.47%;
-  .linkList {
-    justify-content: flex-end;
+  width: 100vw;
+  height: 117px;
+  z-index: 2;
+  nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-right: 7.47%;
 
-    li {
-      .link {
-        color: #737373;
-        text-decoration: none;
-        font-size: 14px;
-        line-height: 85px;
-        margin-left: 20px;
+    .linkList {
+      justify-content: flex-end;
+
+      li {
+        .link {
+          color: #737373;
+          text-decoration: none;
+          font-size: 14px;
+          line-height: 85px;
+          margin-left: 20px;
+        }
+
+        .register {
+          border: 0.75px solid #FAD648;
+          padding: 9px 10px;
+        }
       }
+    }
 
-      .register {
-        border: 0.75px solid #FAD648;
-        padding: 9px 10px;
+    .scrollList {
+      li {
+        .scrollLink {
+          color: #3C3C3C;
+          font-size: 18px;
+          margin-left: 55px;
+        }
+
+        .start {
+          border: 0.75px solid #3C3C3C;
+          padding: 9px 20px;
+        }
       }
     }
   }
-
-  .scrollList {
-    li {
-      .scrollLink {
-        color: #3C3C3C;
-        font-size: 18px;
-        margin-left: 55px;
-      }
-      .start{
-        border: 0.75px solid #3C3C3C;
-        padding: 9px 20px;
-      }
-    }
-  }
+}
+.navBackground{
+  background-color: white;
 }

@@ -38,7 +38,7 @@ class HomeContact extends Component {
     render() {
         const {name, email, message} = this.state;
         return (
-            <section className='contact flex-box'>
+            <section className='contact flex-box' id='HomeContact'>
                 <div className='contactForm flex-box'>
                     <h1>Skontaktuj się z nami</h1>
                     <img src={decoration}></img>

@@ -20,7 +20,7 @@ class HomeWhoWeHelp extends Component {
         this.setState({
             page: num
         });
-    }
+    };
 
     render() {
         let actualOrganizations = organizacje[this.state.typeOfOrganization];
