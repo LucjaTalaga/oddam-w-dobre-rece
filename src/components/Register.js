@@ -7,23 +7,55 @@ import {
 
 
 class Register extends Component {
+    state = {
+        isEmailProper: true,
+        isPasswordProper: true,
+        isPasswordRepeatProper: true,
+        email: '',
+        password: '',
+        passwordRepeat: ''
+    };
+    handleChange = e => {
+        this.setState({
+            [e.target.name]: e.target.value
+        });
+    };
+    handleSubmit = e => {
+        e.preventDefault();
+        let emailVaild = this.state.email.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i) !== null ? true : false;
+        let passwordValid = this.state.password.length >= 6 ? true : false;
+        let passwordsMatch = this.state.password.localeCompare(this.state.passwordRepeat)==0 ? true : false;
+        this.setState({
+            isEmailProper: emailVaild,
+            isPasswordProper: passwordValid,
+            isPasswordRepeatProper: passwordsMatch
+        });
+        console.log(passwordsMatch);
+    };
+
     render() {
+        const {isEmailProper, isPasswordProper, isPasswordRepeatProper, email, password, passwordRepeat} = this.state;
         return (
             <section className='register flex-box'>
                 <div className='registerForm flex-box'>
                     <h1>Załóż konto</h1>
                     <img src={decoration}></img>
-                    <form>
+                    <form onSubmit={this.handleSubmit}>
                         <div className='labels flex-box'>
-                            <label id="name">Email<br/>
-                                <input type="text" name="name"/>
-                            </label>
-                            <label id="pass">Hasło<br/>
-                                <input type="password" name="pass"/>
-                            </label>
-                            <label id="passRepeat">Powtórz hasło<br/>
-                                <input type="password" name="passRepeat"/>
-                            </label>
+                            <div>
+                                <label id="email">Email<br/>
+                                    <input type="email" name="email" value={email} onChange={this.handleChange}/>
+                                </label>
+                                <p className={isEmailProper ? 'hide' : ''}>Podany email jest nieprawidłowy!</p>
+                                <label id="password">Hasło<br/>
+                                    <input type="password" name="password" value={password} onChange={this.handleChange}/>
+                                </label>
+                                <p className={isPasswordProper ? 'hide' : ''}>Podane hasło jest za krótkie!</p>
+                                <label id="passwordRepeat">Powtórz hasło<br/>
+                                    <input type="password" name="passwordRepeat" value={passwordRepeat} onChange={this.handleChange}/>
+                                </label>
+                                <p className={isPasswordRepeatProper ? 'hide' : ''}>Podane hasła są różne</p>
+                            </div>
                         </div>
                         <button><Link to="/login" className='registerLink'>Zaloguj się</Link></button>
                         <button>Załóż konto</button>

@@ -38,6 +38,10 @@
           border-bottom: 1px solid #707070;
         }
       }
+      p{
+        font-size: 10px;
+        color:red;
+      }
     }
 
     button{
@@ -56,4 +60,7 @@
       float: right;
     }
   }
+}
+.hide{
+  display: none;
 }
