@@ -31,11 +31,15 @@
         input {
           margin-top: 9px;
           background-color: #FFFFFFC9;
-          color: #3C3C3C26;
+          color: black;
           background-color: #F0F1F1;
           border: none;
           border-bottom: 1px solid #707070;
         }
+      }
+      p{
+        font-size: 10px;
+        color:red;
       }
     }
 
@@ -55,4 +59,7 @@
       float: right;
     }
   }
+}
+.hide{
+  display: none;
 }

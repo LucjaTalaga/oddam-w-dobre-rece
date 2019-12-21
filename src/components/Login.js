@@ -7,20 +7,47 @@ import {
 
 
 class Login extends Component {
+    state = {
+        isEmailProper: true,
+        isPasswordProper: true,
+        email: '',
+        password: ''
+    };
+    handleChange = e => {
+        this.setState({
+            [e.target.name]: e.target.value
+        });
+    };
+    handleSubmit = e => {
+        e.preventDefault();
+        let emailVaild = this.state.email.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)!==null ? true : false;
+        let passwordValid = this.state.password.length>=6 ? true : false;
+        this.setState({
+            isEmailProper: emailVaild,
+            isPasswordProper: passwordValid
+        });
+        console.log(passwordValid);
+    };
+
     render() {
+        const {isEmailProper, isPasswordProper, email, password} = this.state;
         return (
             <section className='login flex-box'>
                 <div className='loginForm flex-box'>
                     <h1>Zaloguj się</h1>
                     <img src={decoration}></img>
-                    <form>
+                    <form onSubmit={this.handleSubmit}>
                         <div className='labels flex-box'>
-                            <label id="name">Email<br/>
-                                <input type="text" name="name"/>
-                            </label>
-                            <label id="email">Hasło<br/>
-                                <input type="email" name="email"/>
-                            </label>
+                            <div>
+                                <label id="email">Email<br/>
+                                    <input type="email" name="email" value={email} onChange={this.handleChange}/>
+                                </label>
+                                <p className={isEmailProper ? 'hide' : ''}>Podany email jest nieprawidłowy!</p>
+                                <label id="password">Hasło<br/>
+                                    <input type="password" name="password" value={password} onChange={this.handleChange}/>
+                                </label>
+                                <p className={isPasswordProper ? 'hide' : ''}>Podane hasło jest za krótkie!</p>
+                            </div>
                         </div>
                         <button><Link to="/register" className='loginLink'>Załóż konto</Link></button>
                         <button>Zaloguj się</button>
