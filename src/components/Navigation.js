@@ -55,7 +55,7 @@ class Navigation extends Component {
                         <li><ScrollLink className='scrollLink' spy={true} smooth={true} activeClass='active'
                                         to='HomeWhoWeHelp'>Fundacja i organizacje</ScrollLink></li>
                         <li><ScrollLink className='scrollLink' spy={true} smooth={true} activeClass='active'
-                                        to='HomeContact'>kontakt</ScrollLink></li>
+                                        to='HomeContact'>Kontakt</ScrollLink></li>
                     </ul>
                 </nav>
             </section>
