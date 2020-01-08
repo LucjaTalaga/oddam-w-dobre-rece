@@ -13,7 +13,8 @@ class Register extends Component {
         isPasswordRepeatProper: true,
         email: '',
         password: '',
-        passwordRepeat: ''
+        passwordRepeat: '',
+        error: null
     };
     handleChange = e => {
         this.setState({
@@ -22,6 +23,7 @@ class Register extends Component {
     };
     handleSubmit = e => {
         e.preventDefault();
+        const {isEmailProper, isPasswordProper, isPasswordRepeatProper, email, password, passwordRepeat, error} = this.state;
         let emailVaild = this.state.email.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i) !== null ? true : false;
         let passwordValid = this.state.password.length >= 6 ? true : false;
         let passwordsMatch = this.state.password.localeCompare(this.state.passwordRepeat)==0 ? true : false;
@@ -30,7 +32,18 @@ class Register extends Component {
             isPasswordProper: passwordValid,
             isPasswordRepeatProper: passwordsMatch
         });
-        console.log(passwordsMatch);
+        if(isEmailProper && isPasswordProper && isPasswordRepeatProper){
+            this.props.firebase
+                .doCreateUserWithEmailAndPassword(email, password)
+                .then(authUser => {
+                    this.setState({ email, password});
+                    this.props.history.push('/');
+                })
+                .catch(error => {
+                    this.setState({ error });
+                });
+        }
+        console.log(error);
     };
 
     render() {
