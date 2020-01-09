@@ -15,6 +15,11 @@
       justify-content: flex-end;
 
       li {
+        color: #000000;
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 85px;
+        margin-left: 20px;
         .link {
           color: #737373;
           text-decoration: none;
@@ -26,6 +31,7 @@
         .register {
           border: 0.75px solid #FAD648;
           padding: 9px 10px;
+          color: #000000;
         }
       }
     }

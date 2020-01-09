@@ -11,7 +11,8 @@ class Login extends Component {
         isEmailProper: true,
         isPasswordProper: true,
         email: '',
-        password: ''
+        password: '',
+        error: null
     };
     handleChange = e => {
         this.setState({
@@ -20,13 +21,26 @@ class Login extends Component {
     };
     handleSubmit = e => {
         e.preventDefault();
+        const { isEmailProper, isPasswordProper, email, password, error} = this.state;
         let emailVaild = this.state.email.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)!==null ? true : false;
         let passwordValid = this.state.password.length>=6 ? true : false;
         this.setState({
             isEmailProper: emailVaild,
             isPasswordProper: passwordValid
         });
-        console.log(passwordValid);
+        if(isEmailProper && isPasswordProper){
+            this.props.firebase
+                .doSignInWithEmailAndPassword(email, password)
+                .then(() => {
+                    this.setState({ email, password});
+                    this.props.history.push('/');
+                })
+                .catch(error => {
+                    this.setState({ error });
+                    alert("Nieprawidłowe dane logowania");
+                });
+        }
+
     };
 
     render() {
