@@ -28,23 +28,36 @@ class Navigation extends Component {
 
         const height =
             document.documentElement.scrollHeight -
-            document.documentElement.clientHeight
+            document.documentElement.clientHeight;
 
-        const scrolled = winScroll / height
+        const scrolled = winScroll / height;
 
         this.setState({
             theposition: scrolled,
         })
     };
+    logoutHandler = () => {
+        this.props.firebase.doSignOut();
+    };
 
     render() {
+        const {authUser} = this.props;
+        const notLogged =
+            <ul className='linkList flex-box'>
+                <li><Link className='link' to="/login">Zaloguj się</Link></li>
+                <li><Link className='link register' to="/register">Załóż konto</Link></li>
+            </ul>;
+        const logged =
+            <ul className='linkList flex-box'>
+                <li>{authUser ? "Cześć "+ authUser.email : ''} </li>
+                <li><Link className='link register' to="/give-back">Oddaj rzeczy</Link></li>
+                <li><Link className='link' to="/logout" onClick={this.logoutHandler}>Wyloguj się</Link></li>
+            </ul>;
+
         return (
             <section className={this.state.theposition !== 0 ? 'navBackground navigation' : 'navigation' }>
                 <nav>
-                    <ul className='linkList flex-box'>
-                        <li><Link className='link' to="/login">Zaloguj się</Link></li>
-                        <li><Link className='link register' to="/register">Załóż konto</Link></li>
-                    </ul>
+                    {authUser ? logged : notLogged}
                     <ul className='scrollList flex-box'>
                         <li><ScrollLink className='scrollLink start' activeClass='active' to='HomeHeader' spy={true}
                                         smooth={true}>Start</ScrollLink></li>
