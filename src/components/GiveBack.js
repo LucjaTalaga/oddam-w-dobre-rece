@@ -8,12 +8,17 @@ class GiveBack extends Component {
     state = {
         step: 1
     };
+    stepChanger = (value) => {
+        this.setState({
+            step: this.state.step + value
+        })
+    };
     render() {
         return (
             <>
                 <GiveBackHeader/>
                 <GiveBackInformation step={this.state.step}/>
-                <GiveBackForm step={this.state.step}/>
+                <GiveBackForm step={this.state.step} stepChanger={this.stepChanger}/>
             </>
         )
     }

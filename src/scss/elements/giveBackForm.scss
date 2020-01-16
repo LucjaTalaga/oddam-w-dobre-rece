@@ -1,0 +1,63 @@
+.giveBackForm{
+  height: 92vh;
+  min-height: 600px;
+  width: 100vw;
+  background-image: url("../../assets/Background-Form.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  .giveBackSteps{
+    margin-left: 7.47vw;
+    p{
+      color: #3C3C3C;
+      font-size: 18px;
+      font-weight: 300;
+      padding-top: 3.74vh;
+      margin-bottom: 7.28vh;
+    }
+    h1{
+      font-size: 35.5px;
+      font-weight: 600;
+    }
+    form{
+      .containerStepOne{
+        margin: 4.68vh 0;
+        display: block;
+        font-size: 18px;
+        line-height: 29px;
+        cursor: pointer;
+        position: relative;
+        padding-left: 4.58vw;
+        input{
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+        }
+
+        }
+      }
+    }
+
+  }
+.checkmarkStepOne {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 29px;
+  width: 29px;
+  border: 0.75px solid #3C3C3C;
+}
+.containerStepOne input:checked ~ .checkmarkStepOne {
+  background-color: #FAD648;
+}
+
+.stepButtons {
+  margin-top: 10vh;
+  font-size: 17.5px;
+  border: 0.75px solid #3C3C3C;
+  padding: 17px 43px;
+  background-color: transparent;
+}
+button:first-of-type{
+    margin-left: 7.47vw;
+}
+
