@@ -8,7 +8,7 @@ class FormStepThree extends Component {
                 <p>Krok 3/4 </p>
                 <h1>Lokalizacja: </h1>
                 <form>
-                    <select name="localization" id="localization-select" onChange={this.props.whatCityHandle}>
+                    <select name="whatCity" id="localization-select" onChange={this.props.handleChange}>
                         <option value="">— wybierz —</option>
                         <option value="Poznań">Poznań</option>
                         <option value="Warszawa">Warszawa</option>
@@ -18,27 +18,27 @@ class FormStepThree extends Component {
                     </select>
                     <legend>Komu chcesz pomóc?</legend>
                     <label className='containerStepThree'>
-                        <input type='checkbox' name='dzieciom' value='dzieciom' onChange={this.props.whoYouHelpHandle}/>
+                        <input type='checkbox' name='dzieciom' value='dzieciom' onChange={this.props.whoYouHelpHandle} checked={this.props.whoYouHelp['dzieciom']}/>
                         <span>dzieciom</span>
                     </label>
                     <label className='containerStepThree'>
-                        <input type='checkbox' name='samotnym matkom' value='samotnym matkom' onChange={this.props.whoYouHelpHandle}/>
+                        <input type='checkbox' name='samotnym matkom' value='samotnym matkom' onChange={this.props.whoYouHelpHandle} checked={this.props.whoYouHelp['samotnym matkom']}/>
                         <span>samotnym matkom</span>
                     </label>
                     <label className='containerStepThree'>
-                        <input type='checkbox' name='bezdomnym' value='bezdomnym' onChange={this.props.whoYouHelpHandle}/>
+                        <input type='checkbox' name='bezdomnym' value='bezdomnym' onChange={this.props.whoYouHelpHandle} checked={this.props.whoYouHelp['bezdomnym']}/>
                         <span>bezdomnym</span>
                     </label>
                     <label className='containerStepThree'>
-                        <input type='checkbox' name='niepełnosprawnym' value='niepełnosprawnym' onChange={this.props.whoYouHelpHandle}/>
+                        <input type='checkbox' name='niepełnosprawnym' value='niepełnosprawnym' onChange={this.props.whoYouHelpHandle} checked={this.props.whoYouHelp['niepełnosprawnym']}/>
                         <span>niepełnosprawnym</span>
                     </label>
                     <label className='containerStepThree'>
-                        <input type='checkbox' name='osobom starszym' value='osobom starszym' onChange={this.props.whoYouHelpHandle}/>
+                        <input type='checkbox' name='osobom starszym' value='osobom starszym' onChange={this.props.whoYouHelpHandle} checked={this.props.whoYouHelp['osobom starszym']}/>
                         <span>osobom starszym</span>
                     </label>
                     <label className='organizationStepThree'> Wpisz nazwę konkretnej organizacji (opcjonalne)
-                        <input type='text'></input>
+                        <input type='text' name='additionalOrganization' onChange={this.props.handleChange}></input>
                     </label>
                 </form>
             </div>
