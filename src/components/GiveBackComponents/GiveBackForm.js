@@ -93,7 +93,7 @@ class GiveBackForm extends Component {
             <section className='giveBackForm'>
                 {form}
                 <p>Pomagasz, w {this.state.whatCity}, {this.whoYouHelpList()}, {this.state.additionalOrganization}, dajesz {this.state.howManyBags} worków </p>
-                {(this.props.step<=5 && this.props.step >1) ? <button className='stepButtons' onClick={e => this.formButtonHandler(e, -1)}> Wstecz</button> : null}
+                {(this.props.step<=5 && this.props.step >1) ? <button className='stepButtons backwardButton' onClick={e => this.formButtonHandler(e, -1)}> Wstecz</button> : null}
                 {this.props.step<=5 ? <button className='stepButtons' onClick={e => this.formButtonHandler(e, 1)} disabled={this.isNextButtonDisabled()}>{this.props.step === 5 ? "Potwierdź" : "Dalej"} </button> : null}
             </section>
         )
