@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import FormStepOne from "./FormElements/FormStepOne";
 import FormStepTwo from "./FormElements/FormStepTwo";
 import FormStepThree from "./FormElements/FormStepThree";
+import FormStepFour from "./FormElements/FormStepFour";
 
 class GiveBackForm extends Component {
 
@@ -59,6 +60,7 @@ class GiveBackForm extends Component {
         return false;
     };
     render() {
+        console.log('pomagasz: '+ this.whoYouHelpList());
         let {step} = this.props;
         let form;
         //w zależności od tego, w którym kroku jesteśmy, ładuje nam się odpowiedni formularz
@@ -71,12 +73,10 @@ class GiveBackForm extends Component {
         if(step === 3){
             form = <FormStepThree handleChange={this.handleChange} whoYouHelpHandle={this.whoYouHelpHandle} whoYouHelp={this.state.whoYouHelp}/>
         }
-        if(step === 4){
-            form =
-                <div>
-                    <p>Pomagamy:{this.whoYouHelpList()}</p>
-                </div>
+        if(step === 4) {
+            form = <FormStepFour/>
         }
+
         if(step ===5){
             form =
                 <div>
@@ -92,7 +92,6 @@ class GiveBackForm extends Component {
         return (
             <section className='giveBackForm'>
                 {form}
-                <p>Pomagasz, w {this.state.whatCity}, {this.whoYouHelpList()}, {this.state.additionalOrganization}, dajesz {this.state.howManyBags} worków </p>
                 {(this.props.step<=5 && this.props.step >1) ? <button className='stepButtons backwardButton' onClick={e => this.formButtonHandler(e, -1)}> Wstecz</button> : null}
                 {this.props.step<=5 ? <button className='stepButtons' onClick={e => this.formButtonHandler(e, 1)} disabled={this.isNextButtonDisabled()}>{this.props.step === 5 ? "Potwierdź" : "Dalej"} </button> : null}
             </section>

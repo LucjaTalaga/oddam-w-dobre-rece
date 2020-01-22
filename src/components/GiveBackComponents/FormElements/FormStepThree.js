@@ -19,25 +19,27 @@ class FormStepThree extends Component {
                     <legend>Komu chcesz pomóc?</legend>
                     <label className='containerStepThree'>
                         <input type='checkbox' name='dzieciom' value='dzieciom' onChange={this.props.whoYouHelpHandle} checked={this.props.whoYouHelp['dzieciom']}/>
-                        <span>dzieciom</span>
+                        <span className='checkmarkStepThree'>dzieciom</span>
                     </label>
                     <label className='containerStepThree'>
                         <input type='checkbox' name='samotnym matkom' value='samotnym matkom' onChange={this.props.whoYouHelpHandle} checked={this.props.whoYouHelp['samotnym matkom']}/>
-                        <span>samotnym matkom</span>
+                        <span className='checkmarkStepThree'>samotnym matkom</span>
                     </label>
                     <label className='containerStepThree'>
                         <input type='checkbox' name='bezdomnym' value='bezdomnym' onChange={this.props.whoYouHelpHandle} checked={this.props.whoYouHelp['bezdomnym']}/>
-                        <span>bezdomnym</span>
+                        <span className='checkmarkStepThree'>bezdomnym</span>
                     </label>
+                    <br/>
                     <label className='containerStepThree'>
                         <input type='checkbox' name='niepełnosprawnym' value='niepełnosprawnym' onChange={this.props.whoYouHelpHandle} checked={this.props.whoYouHelp['niepełnosprawnym']}/>
-                        <span>niepełnosprawnym</span>
+                        <span className='checkmarkStepThree'>niepełnosprawnym</span>
                     </label>
                     <label className='containerStepThree'>
                         <input type='checkbox' name='osobom starszym' value='osobom starszym' onChange={this.props.whoYouHelpHandle} checked={this.props.whoYouHelp['osobom starszym']}/>
-                        <span>osobom starszym</span>
+                        <span className='checkmarkStepThree'>osobom starszym</span>
                     </label>
-                    <label className='organizationStepThree'> Wpisz nazwę konkretnej organizacji (opcjonalne)
+                    <br/>
+                    <label className='organizationStepThree'> Wpisz nazwę konkretnej organizacji (opcjonalne) <br/>
                         <input type='text' name='additionalOrganization' onChange={this.props.handleChange}></input>
                     </label>
                 </form>
