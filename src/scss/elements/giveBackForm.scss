@@ -104,14 +104,31 @@
     .formStepFour {
 
       label {
-        font-size: 18px;
+
         text-align: left;
         justify-content: space-between;
+        align-items: center;
+        width: 380px;
+        margin-top:2.06vh;
+        margin-right: 8vw;
+        span{
+          font-size: 18px;
+          width: 82px;
+        }
         input {
           border: 0.75px solid #3C3C3C;
           background: transparent;
           width: 186px;
           height: 30px;
+        }
+      }
+      label.notesForCourier{
+        align-items: flex-start;
+        textarea{
+          height: 90px;
+          border: 0.75px solid #3C3C3C;
+          background: transparent;
+          width: 186px;
         }
       }
     }

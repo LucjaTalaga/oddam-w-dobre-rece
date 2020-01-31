@@ -3,6 +3,7 @@ import FormStepOne from "./FormElements/FormStepOne";
 import FormStepTwo from "./FormElements/FormStepTwo";
 import FormStepThree from "./FormElements/FormStepThree";
 import FormStepFour from "./FormElements/FormStepFour";
+import FormStepFive from "./FormElements/FormStepFive";
 
 class GiveBackForm extends Component {
 
@@ -11,7 +12,14 @@ class GiveBackForm extends Component {
         howManyBags: null,
         whatCity: null,
         whoYouHelp: {},
-        additionalOrganization: ""
+        additionalOrganization: "",
+        street: '',
+        city: '',
+        postCode: '',
+        phoneNumber: '',
+        date: '',
+        hour: '',
+        notes: ''
     };
     // metoda, zmieniająca krok postępowania
     formButtonHandler = (e, val) => {
@@ -79,9 +87,7 @@ class GiveBackForm extends Component {
 
         if(step ===5){
             form =
-                <div>
-                    <p>5 </p>
-                </div>
+                <FormStepFive data={this.state} list={this.whoYouHelpList()}/>
         }
         if(step === 6){
             form =

@@ -17,16 +17,22 @@ class FormStepFour extends Component {
                             <input type='text' name='city' onChange={this.props.handleChange}></input>
                         </label>
                         <label className='flex-box'> <span> Kod pocztowy </span>
-                            <input type='text' name='post-code' onChange={this.props.handleChange}></input>
+                            <input type='text' name='postCode' onChange={this.props.handleChange}></input>
                         </label>
                         <label className='flex-box'> <span> Numer telefonu </span>
-                            <input type='text' name='phone-number' onChange={this.props.handleChange}></input>
+                            <input type='text' name='phoneNumber' onChange={this.props.handleChange}></input>
                         </label>
                     </div>
                     <div>
                         <legend>Termin odbioru:</legend>
-                        <label > Data
+                        <label className='flex-box' > <span> Data </span>
                             <input type='text' name='date' onChange={this.props.handleChange}></input>
+                        </label>
+                        <label className='flex-box' > <span> Godzina </span>
+                            <input type='text' name='hour' onChange={this.props.handleChange}></input>
+                        </label>
+                        <label className='flex-box notesForCourier' > <span> Uwagi dla kuriera </span>
+                            <textarea type='text' name='notes' onChange={this.props.handleChange}></textarea>
                         </label>
                     </div>
                 </form>
