@@ -40,7 +40,7 @@ class FormStepThree extends Component {
                     </label>
                     <br/>
                     <label className='organizationStepThree'> Wpisz nazwę konkretnej organizacji (opcjonalne) <br/>
-                        <input type='text' name='additionalOrganization' onChange={this.props.handleChange}></input>
+                        <input type='text' name='additionalOrganization' value={this.props.addOrg} onChange={this.props.handleChange}></input>
                     </label>
                 </form>
             </div>

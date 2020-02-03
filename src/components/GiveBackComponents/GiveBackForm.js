@@ -46,7 +46,7 @@ class GiveBackForm extends Component {
      let whoWeHelpArr = [];
      Object.getOwnPropertyNames(whoYouHelp).forEach(function(val) {
          if(whoYouHelp[val]){
-             whoWeHelpArr.push(val+', ');
+             whoWeHelpArr.push(val);
          }
      });
      return whoWeHelpArr;
@@ -79,10 +79,10 @@ class GiveBackForm extends Component {
             form = <FormStepTwo handleChange={this.handleChange}/>
         }
         if(step === 3){
-            form = <FormStepThree handleChange={this.handleChange} whoYouHelpHandle={this.whoYouHelpHandle} whoYouHelp={this.state.whoYouHelp}/>
+            form = <FormStepThree handleChange={this.handleChange} whoYouHelpHandle={this.whoYouHelpHandle} whoYouHelp={this.state.whoYouHelp} addOrg={this.state.additionalOrganization}/>
         }
         if(step === 4) {
-            form = <FormStepFour/>
+            form = <FormStepFour handleChange={this.handleChange}/>
         }
 
         if(step ===5){
@@ -99,7 +99,7 @@ class GiveBackForm extends Component {
             <section className='giveBackForm'>
                 {form}
                 {(this.props.step<=5 && this.props.step >1) ? <button className='stepButtons backwardButton' onClick={e => this.formButtonHandler(e, -1)}> Wstecz</button> : null}
-                {this.props.step<=5 ? <button className='stepButtons' onClick={e => this.formButtonHandler(e, 1)} disabled={this.isNextButtonDisabled()}>{this.props.step === 5 ? "Potwierdź" : "Dalej"} </button> : null}
+                {this.props.step<=5 ? <button className='stepButtons' onClick={e => this.formButtonHandler(e, 1)} /*disabled={this.isNextButtonDisabled()}*/>{this.props.step === 5 ? "Potwierdź" : "Dalej"} </button> : null}
             </section>
         )
     }
