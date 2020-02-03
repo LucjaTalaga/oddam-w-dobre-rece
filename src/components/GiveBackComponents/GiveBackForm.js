@@ -4,6 +4,7 @@ import FormStepTwo from "./FormElements/FormStepTwo";
 import FormStepThree from "./FormElements/FormStepThree";
 import FormStepFour from "./FormElements/FormStepFour";
 import FormStepFive from "./FormElements/FormStepFive";
+import FormStepSix from "./FormElements/FormStepSix";
 
 class GiveBackForm extends Component {
 
@@ -91,9 +92,7 @@ class GiveBackForm extends Component {
         }
         if(step === 6){
             form =
-                <div>
-                    <p>6 </p>
-                </div>
+                <FormStepSix/>
         }
         return (
             <section className='giveBackForm'>
