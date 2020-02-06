@@ -9,27 +9,27 @@ class FormStepOne extends Component {
                 <h1>Zaznacz, co chcesz oddać</h1>
                 <form>
                     <label className='containerStepOne'>
-                        <input type='radio'name='whatAreYouGiving' value='clothesToWear' onChange={this.props.handleChange}/>
+                        <input type='radio'name='whatAreYouGiving' value='ubrania, które nadają się do ponownego użycia' onChange={this.props.handleChange}/>
                         <span className="checkmarkStepOne"></span>
                         Ubrania, które nadają się do ponownego użycia
                     </label>
                     <label className='containerStepOne'>
-                        <input type='radio'name='whatAreYouGiving' value='clothesNotToWear' onChange={this.props.handleChange}/>
+                        <input type='radio'name='whatAreYouGiving' value='ubrania, do wyrzucenia' onChange={this.props.handleChange}/>
                         <span className="checkmarkStepOne"></span>
                         Ubrania, do wyrzucenia
                     </label>
                     <label className='containerStepOne'>
-                        <input type='radio'name='whatAreYouGiving' value='toys' onChange={this.props.handleChange}/>
+                        <input type='radio'name='whatAreYouGiving' value='zabawki' onChange={this.props.handleChange}/>
                         <span className="checkmarkStepOne"></span>
                         Zabawki
                     </label>
                     <label className='containerStepOne'>
-                        <input type='radio'name='whatAreYouGiving' value='books' onChange={this.props.handleChange}/>
+                        <input type='radio'name='whatAreYouGiving' value='książki' onChange={this.props.handleChange}/>
                         <span className="checkmarkStepOne"></span>
                         Książki
                     </label>
                     <label className='containerStepOne'>
-                        <input type='radio'name='whatAreYouGiving' value='other' onChange={this.props.handleChange}/>
+                        <input type='radio'name='whatAreYouGiving' value='inne' onChange={this.props.handleChange}/>
                         <span className="checkmarkStepOne"></span>
                         Inne
                     </label>

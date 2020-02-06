@@ -54,9 +54,11 @@ class GiveBackForm extends Component {
     };
 
     isNextButtonDisabled = () => {
+        let {whatAreYouGiving,  howManyBags, whatCity, street, city, postCode, phoneNumber, date, hour} = this.state;
         let {step} = this.props;
-        let isStepThreeProper = (this.whoYouHelpList().length>0 && this.state.whatCity) ? true : false;
-        let areStepsFinishedArr = [this.state.whatAreYouGiving, this.state.howManyBags, isStepThreeProper, true];
+        let isStepThreeProper = (this.whoYouHelpList().length>0 && whatCity) ? true : false;
+        let isStepFourProper = (street && city && postCode && phoneNumber && date && hour) ? true : false;
+        let areStepsFinishedArr = [whatAreYouGiving, howManyBags, isStepThreeProper, isStepFourProper];
         for(let i=1; i<5;i++){
             if(step === i){
                 if(!areStepsFinishedArr[i-1]){
@@ -98,7 +100,7 @@ class GiveBackForm extends Component {
             <section className='giveBackForm'>
                 {form}
                 {(this.props.step<=5 && this.props.step >1) ? <button className='stepButtons backwardButton' onClick={e => this.formButtonHandler(e, -1)}> Wstecz</button> : null}
-                {this.props.step<=5 ? <button className='stepButtons' onClick={e => this.formButtonHandler(e, 1)} /*disabled={this.isNextButtonDisabled()}*/>{this.props.step === 5 ? "Potwierdź" : "Dalej"} </button> : null}
+                {this.props.step<=5 ? <button className={this.isNextButtonDisabled() ? 'stepButtons buttonDisabled' : 'stepButtons'} onClick={e => this.formButtonHandler(e, 1)} disabled={this.isNextButtonDisabled()}>{this.props.step === 5 ? "Potwierdź" : "Dalej"} </button> : null}
             </section>
         )
     }
