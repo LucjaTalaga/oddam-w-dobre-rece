@@ -1,0 +1,242 @@
+.giveBackForm {
+  height: 92vh;
+  min-height: 600px;
+  width: 100vw;
+  position: relative;
+  background-image: url("../../assets/Background-Form.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .giveBackSteps {
+    margin-left: 7.47vw;
+
+    p {
+      color: #3C3C3C;
+      font-size: 18px;
+      font-weight: 300;
+      padding-top: 3.74vh;
+    }
+
+    h1 {
+      font-size: 35.5px;
+      font-weight: 600;
+      padding-top: 7.28vh;
+    }
+    h2{
+      font-size: 18px;
+      margin-top: 4.67vh;
+      margin-bottom: 2.07vh;
+      font-weight: 600;
+    }
+    > label {
+      font-size: 16px;
+    }
+
+    select {
+      width: 200px;
+      height: 32.6px;
+      font-size: 16px;
+      padding: 5.3px 12px;
+      border: 0.75px solid #3C3C3C;
+      margin-top: 5vh;
+      margin-left: 1.37vw;
+      box-shadow: 0 1px 0 1px rgba(0, 0, 0, .04);
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none; /* Remove default arrow */
+      background: transparent url(../../assets/Icon-Arrow-Up.svg);
+      background-repeat: no-repeat;
+      background-position: right;
+    }
+
+    form {
+      legend {
+        font-size: 18px;
+        margin-bottom: 2vh;
+        margin-top: 5.2vh;
+        font-weight: 600;
+      }
+
+      #localization-select {
+        margin-left: 0;
+      }
+
+      .containerStepOne {
+        margin: 4.68vh 0;
+        display: block;
+        font-size: 18px;
+        line-height: 29px;
+        cursor: pointer;
+        position: relative;
+        padding-left: 4.58vw;
+
+        input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+        }
+      }
+
+      .containerStepThree {
+        margin: 4.68vh 0;
+        display: inline-block;
+        font-size: 18px;
+        line-height: 29px;
+        cursor: pointer;
+        position: relative;
+        padding-right: 4.58vw;
+
+        input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+        }
+      }
+
+      .organizationStepThree {
+        font-size: 18px;
+
+        input {
+          margin-top: 14.5px;
+          border: 0.75px solid #3C3C3C;
+          background: transparent;
+          width: 386px;
+          height: 30px;
+        }
+      }
+    }
+
+    .formStepFour {
+
+      label {
+
+        text-align: left;
+        justify-content: space-between;
+        align-items: center;
+        width: 380px;
+        margin-top: 2.06vh;
+        margin-right: 8vw;
+
+        span {
+          font-size: 18px;
+          width: 82px;
+        }
+
+        input {
+          border: 0.75px solid #3C3C3C;
+          background: transparent;
+          width: 186px;
+          height: 30px;
+        }
+      }
+
+      label.notesForCourier {
+        align-items: flex-start;
+
+        textarea {
+          height: 90px;
+          border: 0.75px solid #3C3C3C;
+          background: transparent;
+          width: 186px;
+        }
+      }
+    }
+
+    .stepFiveBox {
+      align-items: center;
+
+      .icon {
+        width: 36px;
+        height: 36px;
+        display: inline-block;
+
+      }
+
+      p {
+        margin-bottom: 0;
+        padding-top: 0;
+        font-size: 18px;
+        color: black;
+        margin-left: 1vw;
+      }
+    }
+
+    .stepFiveAdress {
+      .stepFiveLabel {
+        text-align: left;
+        justify-content: space-between;
+        align-items: center;
+        width: 380px;
+        margin-top: 2.06vh;
+        margin-right: 8vw;
+
+        span:first-child {
+          font-size: 18px;
+          width: 82px;
+        }
+
+        span:last-child {
+          width: 186px;
+          height: 30px;
+        }
+
+      }
+    }
+  }
+
+  .checkmarkStepOne {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 29px;
+    width: 29px;
+    border: 0.75px solid #3C3C3C;
+  }
+
+  .checkmarkStepThree {
+    padding: 8px 18px;
+    border: 0.75px solid #3C3C3C;
+  }
+
+  .containerStepOne input:checked ~ .checkmarkStepOne,
+  .containerStepThree input:checked ~ .checkmarkStepThree {
+    background-color: #FAD648;
+  }
+
+  .stepButtons {
+    position: absolute;
+    left: 7.47vw;
+    bottom: 5vh;
+    margin-right: 34px;
+    margin-top: 10vh;
+    font-size: 17.5px;
+    border: 0.75px solid #3C3C3C;
+    padding: 17px 43px;
+    background-color: transparent;
+  }
+  .buttonDisabled{
+    color: grey;
+  }
+
+  button:nth-of-type(2) {
+    margin-left: 170px;
+  }
+  .giveBackFinal {
+    width: 50%;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    div{
+      flex-direction: column;
+      width: 74%;
+    }
+    h1{
+      font-size: 29px;
+      color: #3C3C3C;
+      font-weight: 300;
+      text-align: center;
+      margin-bottom: 2.6vh;
+    }
+  }
+}
+
